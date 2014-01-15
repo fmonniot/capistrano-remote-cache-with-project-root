@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["matteo.collina@gmail.com"]
   gem.description   = %q{Capistrano Strategy for deployment of a project in a subdirectory}
   gem.summary       = %q{Capistrano Strategy for deployment of a project in a subdirectory}
-  gem.homepage      = "www.minet.net"
+  gem.homepage      = "http://www.minet.net"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
