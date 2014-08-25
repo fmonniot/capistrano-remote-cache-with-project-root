@@ -26,6 +26,7 @@ module Capistrano
               run "cd #{cached_project_root}; for i in `find . -type l`; do unln -r $i; done;"
               run "cp -RPp #{cached_project_root} #{configuration[:release_path]} && #{mark}"
             else
+              run "mkdir -p #{configuration[:release_path]}"
               exclusions = copy_exclude.map { |e| "--exclude=\"#{e}\"" }.join(' ')
               run "rsync -lrpt #{exclusions} #{cached_project_root}/* #{configuration[:release_path]} && #{mark}"
             end
